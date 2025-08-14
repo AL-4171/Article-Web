@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      
+            <a class="navbar-brand text-muted" href="https://getbootstrap.com/">
+              <img src="Bootstrap_logo.svg"  alt="Bootstrap Logo" 
+              class=" me-2 " 
+              style="width: 35px;" >
+              Bootstrap <span class="fs-6 text-muted">Article Website</span>
+            </a>
+       
+    
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" 
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav w-100 justify-content-around">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Posts.html">Posts</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="profile.html" role="button" 
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        MyProfile
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="form.html">Register</a></li>
+                        <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+                        <li><hr class="dropdown-divider"><a class="dropdown-item" href="create.html">Create Post</a></li>
+
+                    </ul>
+                </li>
+
+            <form class="d-flex ms-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="col-md-6 mb-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h4 class="mb-3">Login</h4>
+        <form onsubmit="event.preventDefault(); showAlert('Login successful!')">
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" required>
+          </div>
+          <button class="btn btn-primary w-100" type="submit">Login</button>
+          <a href="form.html"><p>If you not have an account signup</p></a>  
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="alertBox" class="alert alert-success mt-4 d-none" role="alert"></div>
+</div>
+<script>
+    function showAlert(message) {
+      const alertBox = document.getElementById('alertBox');
+      alertBox.textContent = message;
+      alertBox.classList.remove('d-none');
+    }
+  </script>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Article website</p>
+      </footer>
+      
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    </body>
+    </html>
